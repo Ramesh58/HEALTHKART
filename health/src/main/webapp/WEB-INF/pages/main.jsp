@@ -11,7 +11,7 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 		<!-- Latest compiled JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-		<title>HEALTH PRODUCTS</title>
+		<title>Health Care Products</title>
 	</head>
 	<body>
 		<nav class="navbar navbar-inverse">
@@ -20,7 +20,7 @@
 				
             <a class="brand" href="#">
             <img src="pic/0.png" width="150" height="50">
-            <a href="main.jsp" style="color: silver;"><b>Health Products</b></a>
+            <a href="main.jsp" style="color: silver;"><b>Health Care Products</b></a>
             </a>
             	
 					
@@ -34,8 +34,8 @@
 		<div class="container-fluid">
     		<img class="first-slide home-image" src="pic/7.jpg" width="1320" height="550">
     		<div class="carousel-caption">   
-    			<h3><p><mark>Health Products</mark></p></h3>    			
-           				
+    			<h3><p><mark>Health Care</mark></p></h3>    			
+           		
            	</div>
         	
        	</div> 
