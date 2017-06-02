@@ -46,6 +46,9 @@
 						<url:url value="/all/registrationform" var="url"></url:url>
 						<li><a href="${url }">Register</a></li>
 						
+						<url:url value="/cart/getCartId" var="url"></url:url>
+						<li><a href="${url }">Cart</a></li>
+						
       				</ul>
       				<ul class="nav navbar-nav navbar-right">
 						<li><a href="login.jsp">Sign-out<span class="sr-only">go to logout page.</span></a></li>

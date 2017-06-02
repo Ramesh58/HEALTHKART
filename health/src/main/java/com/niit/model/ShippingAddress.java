@@ -1,5 +1,7 @@
 package com.niit.model;
 
+import java.io.Serializable;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -8,14 +10,24 @@ import javax.persistence.Id;
 import org.hibernate.validator.constraints.NotEmpty;
 
 @Entity
-public class ShippingAddress {
+public class ShippingAddress implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int id;
 	@NotEmpty
-	private String apartmentnumber;
+	private String apartmentNumber;
 	@NotEmpty
-	private String streetname;
+	private String streetName;
+	public String getApartmentNumber() {
+		return apartmentNumber;
+	}
+	public void setApartmentNumber(String apartmentNumber) {
+		this.apartmentNumber = apartmentNumber;
+	}
 	@NotEmpty
 	private String city;
 	@NotEmpty
@@ -28,17 +40,13 @@ public class ShippingAddress {
 	public void setId(int id) {
 		this.id = id;
 	}
-	public String getApartmentnumber() {
-		return apartmentnumber;
+
+	
+	public String getStreetName() {
+		return streetName;
 	}
-	public void setApartmentnumber(String apartmentnumber) {
-		this.apartmentnumber = apartmentnumber;
-	}
-	public String getStreetname() {
-		return streetname;
-	}
-	public void setStreetname(String streetname) {
-		this.streetname = streetname;
+	public void setStreetName(String streetName) {
+		this.streetName = streetName;
 	}
 	public String getCity() {
 		return city;

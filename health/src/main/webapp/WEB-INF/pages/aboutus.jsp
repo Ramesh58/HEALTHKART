@@ -7,6 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+ <div class="about-healthkart">
+                <p><strong>About HealthKart: </strong>HealthKart.com is India's largest online health & fitness store for men and women. Shop online from the
+                    latest collections of health, fitness and similar products featuring the best brands.</p>
+            </div>
 </body>
 </html>

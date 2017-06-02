@@ -16,7 +16,7 @@ public class HomeController {
 	private CategoryService categoryService;
 	@RequestMapping("/")
 public String homePage(HttpSession session){
- 		session.setAttribute("categories",categoryService.getAllCategorys());
+		session.setAttribute("categories",categoryService.getAllCategorys());
 	return "home";
 }
 @RequestMapping("/aboutus")	

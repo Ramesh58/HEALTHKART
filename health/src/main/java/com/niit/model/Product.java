@@ -1,5 +1,7 @@
 package com.niit.model;
 
+import java.io.Serializable;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -9,12 +11,17 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Transient;
 import javax.validation.constraints.Min;
 
+
 import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.web.multipart.MultipartFile;
 
 @Entity
-public class Product 
+public class Product implements Serializable
 {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int id;
@@ -98,6 +105,14 @@ public class Product
 	public void setImage(MultipartFile image) 
 	{
 		this.image = image;
+	}
+	public int getQuantity() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	public void setQuantity(int i) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

@@ -15,7 +15,7 @@ import com.niit.model.Customer;
 import com.niit.service.CustomerService;
 
 @Controller
-public class CustomerController { 
+public class CustomerController {
 	@Autowired
 private CustomerService customerService;
 @RequestMapping("/all/registrationform")
@@ -24,7 +24,7 @@ public String getRegistrationForm(Model model){
 	return "registrationpage";
 }
 @RequestMapping("all/register")
-public String registerCustomer(@Valid @ModelAttribute(value="customer") Customer customer,BindingResult result,Model model){
+public String registerCustomer(@Valid @ModelAttribute(name="customer") Customer customer,BindingResult result,Model model){
 	if(result.hasErrors())
 		return "registrationpage"; //nonempty values..
 	List<Customer> customers= customerService.getCustomers();

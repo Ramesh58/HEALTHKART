@@ -5,7 +5,6 @@ import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
-import java.util.Locale.Category;
 
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
@@ -21,40 +20,40 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import com.niit.model.Category;
 import com.niit.model.Product;
 import com.niit.service.CategoryService;
 import com.niit.service.ProductService;
-
 
 @Controller
 public class ProductController 
 {
 	@Autowired
-	private ProductService productService;;
+	private ProductService productService;
 	
 	@Autowired CategoryService categoryService;
 	
 	@RequestMapping("/admin/product/productform")
-	public String showPage(@ModelAttribute(value="product") Product product,BindingResult bindingResult,Model model)
+	public String showPage(@ModelAttribute(name="product") Product product,BindingResult bindingResult,Model model)
 	{
-		model.addAttribute("productList", productService.getAllProducts());
+		model.addAttribute("categoryList", categoryService.getAllCategorys());
 		return "productform";
 	}	
 	
 	
 	
-	
-	/*@RequestMapping("admin/product/productform")
+	/*
+	@RequestMapping("admin/product/productform")
 	public String getProductForm(Model model)
 	{
 		model.addAttribute("product",new Product());
 		model.addAttribute("categoryList", categoryService.getAllCategorys());
 		return "productform";
-	}	*/
-	
+	}	
+	*/
 /*	=======================saving product Object=====================================*/
 	@RequestMapping("admin/product/saveproduct")
-	public String saveOrUpdateProduct(@Valid @ModelAttribute(value="product") Product product,BindingResult result,RedirectAttributes attributes)
+	public String saveOrUpdateProduct(@Valid @ModelAttribute(name="product") Product product,BindingResult result,RedirectAttributes attributes)
 	{
 		if(result.hasErrors())
 		{
@@ -66,7 +65,7 @@ public class ProductController
 		MultipartFile image=product.getImage();
 		if(image!=null && !image.isEmpty())
 		{
-			Path path=Paths.get("F:/workspace/DTProject1/src/main/webapp/WEB-INF/resources/images/"+product.getId()+".png");
+			Path path=Paths.get("D:/Eclipse Workspace/foodmonster/src/main/webapp/WEB-INF/resources/images/"+product.getId()+".png");
 			try 
 			{
 				image.transferTo(new File(path.toString()));
@@ -117,7 +116,7 @@ public class ProductController
 	{
 		Product product=productService.getProductById(id);
 		model.addAttribute("product", product);
-		List<com.niit.model.Category> categoryList=categoryService.getAllCategorys();
+		List<Category> categoryList=categoryService.getAllCategorys();
 		model.addAttribute("categoryList", categoryList);
 		return "productform";
 	}
@@ -139,5 +138,5 @@ public class ProductController
 		model.addAttribute("searchCondition",searchCondition);
 		return "productlist";
 	}
-	
+
 }

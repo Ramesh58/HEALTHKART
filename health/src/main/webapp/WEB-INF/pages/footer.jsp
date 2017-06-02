@@ -16,15 +16,15 @@
 	<body>
 	
 	<br><br><br><br><br>
-	<nav class="navbar navbar-light" style="background-color:cyan;">
+		<nav class="navbar navbar-inverse">
 			<div class="container-fluid">
 				<div class="navbar-header">
 					<a class="navbar-brand">
-						<li style="color: ramesh"><span class="glyphicon glyphicon-copyright-mark"> HealthCare products</span></li>
+						<li style="color: peraiah;">@ 2017,Health Cart</li>
 					</a>
 				</div>
 				<ul class="nav navbar-brand navbar-right">
-					<li style="color: ramesh;">bgcollections@outlet.co.in</li>
+					<li style="color: ramesh;">ramesh@outlet.co.in</li>
 				</ul>
 			</div>
 		</nav>			

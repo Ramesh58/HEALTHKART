@@ -22,11 +22,10 @@
     <script src="https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>
 
     <link href="https://cdn.datatables.net/1.10.10/css/jquery.dataTables.min.css" rel="stylesheet">
-      
 		<title>Navigationbar</title>
 	</head>
 	<body>
-		<nav class="navbar navbar-light" style="background-color:black ;">
+		<nav class="navbar navbar-light" style="background-color:skyblue;">
 		<img style="width: 75px;height: 50px;border: 0;margin-top: 10px;float: left;" src="<c:url value="/resources/images/logo.png"></c:url>">
 			<div class="container-fluid">
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse-example" aria-expanded="false">
@@ -36,7 +35,7 @@
         			<span class="icon-bar"></span>
       			</button>
 				<div class="navbar-header">
-					<a class="navbar-brand" href="#">Health Care Products</a>
+					<a class="navbar-brand" href="#">Health Care</a>
 				</div>
 				<div class="collapse navbar-collapse" id="collapse-example">
 					<ul class="nav navbar-nav">
@@ -58,6 +57,24 @@
 								</c:forEach>
 							</ul>
 						</li>
+						  <c:if test="${pageContext.request.userPrincipal.name!=null }">
+						  </c:if>
+
+    <security:authorize access="hasRole('ROLE_USER')">
+    <c:url var="cart" value="/cart/getCartId"></c:url>
+       
+    <li><a href="${cart }" ><span class="on">Cart</span></a></li>
+    
+    </security:authorize>
+    
+    
+    
+    <!-- when user not logged in -->
+    <c:if test="${pageContext.request.userPrincipal.name==null }">
+     <c:url var="cart" value="/beforeCart/getBeforeLogin"></c:url>
+    <li><a href="${cart }"><span class="on" >Cart <span id="show"></span></span></a></li></c:if>
+    
+    
 						<c:if test="${pageContext.request.userPrincipal.name!=null }">			
  							<li><a href="">Welcome ${pageContext.request.userPrincipal.name }</a></li>
  						</c:if>
@@ -66,7 +83,7 @@
  							<li><a href="${url }">Register</a></li>
  							<url:url value="/login" var="url"></url:url>
   							<li><a href="${url }">Sign in</a></li>
-  						</c:if>
+  						</c:if>   
  						<c:if  test="${pageContext.request.userPrincipal.name!=null }">
   							<li><a href="<c:url value="/j_spring_security_logout"></c:url>">logout</a></li>
   						</c:if>
@@ -75,4 +92,4 @@
 			</div>
 		</nav>
 	</body>
-</html> 
+</html>  

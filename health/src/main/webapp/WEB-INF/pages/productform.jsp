@@ -19,7 +19,7 @@
 		<title>Insert title here</title>
 	</head>
 	<body>
-	<%@ include file="header.jsp" %>
+	<%@ include file="headeradmin.jsp" %>
 		<div class="container wrapper">
 			<div class="container">
 				<url:url var="url" value="/admin/product/saveproduct"></url:url>
@@ -70,18 +70,18 @@
 					<tr>
 						<div class="form-group">					
 					    <td><label for="Category">Category</label><td>	
-							<%-- <form:select  path="category.cid"	required="true">
+							<form:select  path="category.cId"	required="true">
 								<c:forEach items="${categoryList}" var="category">
 									<form:option path="category.cid" value="${category.cId}"/>${category.categoryName}
 								</c:forEach>
 					
-							</form:select> --%>
+							</form:select>
 						
-							<select>
+							<%-- <select>
 							    <c:forEach items="${categoryList}" var="category">
 							        <option  path="category.cid" value="${category.cId}"/>${category.categoryName}
 							    </c:forEach>
-							</select>
+							</select> --%>
 							
 							
 							

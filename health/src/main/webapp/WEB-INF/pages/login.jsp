@@ -13,12 +13,8 @@ ${error }
 ${logout }
 ${registrationSuccess }
 <form action="<c:url value="j_spring_security_check"></c:url>" method="post" >
-<tr>
-<td>Enter username <input type="text" name="j_username"><br></td>
-</tr>
-<tr>
-<td>Enter password <input type="password" name="j_password"><br></td>
-</tr>
+Enter username <input type="text" name="j_username"><br>
+Enter password <input type="password" name="j_password"><br>
 <input type="submit" value="submit">
 </form>
 </body>
