@@ -16,15 +16,15 @@
 	<body>
 	
 	<br><br><br><br><br>
-		<nav class="navbar navbar-inverse">
+		<nav class="navbar navbar-inverse" style="background-color:skyblue;">
 			<div class="container-fluid">
 				<div class="navbar-header">
 					<a class="navbar-brand">
-						<li style="color: peraiah;">@ 2017,Health Cart</li>
+						<li style="color:grey;">Health Kart</li>
 					</a>
 				</div>
 				<ul class="nav navbar-brand navbar-right">
-					<li style="color: ramesh;">ramesh@outlet.co.in</li>
+					<li style="color:grey;">ramesh@outlet.co.in</li>
 				</ul>
 			</div>
 		</nav>			

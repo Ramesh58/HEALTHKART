@@ -63,4 +63,3 @@
        <transition on="cancel" to="cancelCheckOut"></transition>
       </global-transitions>
    </flow>
- 

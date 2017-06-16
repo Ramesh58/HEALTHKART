@@ -13,6 +13,13 @@
   <c:url var="style" value="/resources/css/cart.css"></c:url>
   <link rel="stylesheet" href="${style}"/>
 </head>
+<style>
+ body {
+        background-color: #444;
+        background: url("http://www.planwallpaper.com/static/images/Alien_Ink_2560X1600_Abstract_Background_dh8LV2F.jpg");
+        
+    }
+</style>
 <body>
 <div id="cart">
  <div>
@@ -54,8 +61,11 @@
        <p>Discount,shipping and tax will be calculated in checkout.</p>
      </div>
    </div>
-
  </div>
 </div>
+  <table align="right">
+<td><a id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" title="Click to return on the top page" data-toggle="tooltip" data-placement="left"><span class="glyphicon glyphicon-chevron-up"></span></a></td>
+</tr>
+</table>
 </body>
 </html>

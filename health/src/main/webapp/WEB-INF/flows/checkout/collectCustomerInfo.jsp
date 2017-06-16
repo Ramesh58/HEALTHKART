@@ -8,35 +8,72 @@
 <title>Insert title here</title>
 <c:url var="style1" value="/resources/css/collectCustomerInfo.css"></c:url>
   <link rel="stylesheet" href="${style1}"/> 
-
-
+  <style>
+ body {
+        background-color: #444;
+        background: url(http://www.planwallpaper.com/static/images/Alien_Ink_2560X1600_Abstract_Background_dh8LV2F.jpg);
+        
+    }
+.vertical-offset-100{
+    padding-top:100px;
+}
+</style>
 </head>
+<center>
 <body>
   <div class="topForm">
       <div id="top">
      <button id="value" disabled="true">1</button>
      <h4 id="text">Collecting Customer Details</h4>
       </div>
+      
+      <div class="container" align="justify">
+			    <div class="row vertical-offset-100">
+			    	<div class="col-md-6 col-md-offset-3">
+			    		<div class="panel panel-default">
+							<div class="panel-heading">
+						    	<h3 class="panel-title" align="center"><i><b>Billing Address</b></i></h3>
+						 	</div>
+						 	<fieldset>
+      
+      
+      
   <form:form modelAttribute="order">
-   <div class="form1">
+   <div class="form1" align="center">
    <label for="firstname">First Name</label>
    <form:input path="cart.customer.firstname" cssStyle="border:2px solid rgba(0,0,0,0.2)"/>
    </div>
-   <div class="form">
-   <label for="lastname">Last Name</label>
+   <tr>
+   <div class="form" align="center">
+   <td><label for="lastname">Last Name</label></td>
    <form:input path="cart.customer.lastname" cssStyle="border:2px solid rgba(0,0,0,0.2)"/>
-   </div>
-   <div class="form">
-   <label for="email">Email</label>
+   </div></tr>
+   <tr>
+   <div class="form" align="center">
+   <td><label for="email">Email</label></td>
    <form:input path="cart.customer.email" cssStyle="border:2px solid rgba(0,0,0,0.2)"/>
    </div>
-   <div class="form">
+   </tr>
+   <div class="form" align="center">
    <label for="phonenumber">Phone Number</label>
    <form:input path="cart.customer.phone" cssStyle="border:2px solid rgba(0,0,0,0.2)"/>
    </div>
+    <div class="form" align="center">
    <button name="_eventId_customerInfoCollected">Next</button>
-   <button name="_eventId_cancel">cancel</button>
+   <button name="_eventId_cancel">cancel</button></div>
   </form:form>
   </div>
+  </fieldset>
+  </div></div></div></div>
+  
 </body>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+</center>
+<%@ include file="/WEB-INF/pages/footer.jsp" %>
 </html>

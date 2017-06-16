@@ -18,7 +18,7 @@ public class ProductDaoImpl implements ProductDao
 	private SessionFactory sessionFactory;
 	
 	
-	public void saveOrUpdateProduct(Product product) 
+	public Product saveOrUpdateProduct(Product product) 
 	{
 		Session session=sessionFactory.openSession();
 		System.out.println("PRODUCT ID BEFORE INSERTION " + product.getId());
@@ -26,6 +26,7 @@ public class ProductDaoImpl implements ProductDao
 		System.out.println("PRODUCT ID AFTER INSERTION " + product.getId());
 		session.flush();
 		session.close();
+		return product;
 	}
 	public List<Product> getAllProducts() 
 	{
@@ -51,4 +52,11 @@ public class ProductDaoImpl implements ProductDao
 		session.flush();
 		session.close();
 	}
+	  public byte[] loadImage(int id){
+		   Session session = sessionFactory.openSession();
+		   Product product = (Product)session.get(Product.class, id);
+		   byte[] b = product.getPicture();
+		   return b;
+	   }
+	
 }

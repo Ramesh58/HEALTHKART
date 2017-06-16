@@ -5,7 +5,7 @@
 <%@ taglib uri="http://www.springframework.org/tags" prefix="url" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>  
 <%@ page isELIgnored="false" %>
-
+<%@ include file="header.jsp" %>
 <html>
 	<head>
 		<meta charset="ISO-8859-1">
@@ -18,8 +18,16 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 		<title>Insert title here</title>
 	</head>
+	<style>
+ body {
+        background-color: #444;
+        background: url("http://www.planwallpaper.com/static/images/Alien_Ink_2560X1600_Abstract_Background_dh8LV2F.jpg");
+        
+    }
+</style>
 	<body>
-	<%@ include file="headeradmin.jsp" %>
+	<center>
+	
 		<div class="container wrapper">
 			<div class="container">
 				<url:url var="url" value="/admin/product/saveproduct"></url:url>
@@ -71,10 +79,9 @@
 						<div class="form-group">					
 					    <td><label for="Category">Category</label><td>	
 							<form:select  path="category.cId"	required="true">
-								<c:forEach items="${categoryList}" var="category">
-									<form:option path="category.cid" value="${category.cId}"/>${category.categoryName}
+									<c:forEach items="${categoryList}" var="category">
+									<form:option path="category.cid" value="${category.cId}"> ${category.categoryName}</form:option>
 								</c:forEach>
-					
 							</form:select>
 						
 							<%-- <select>
@@ -88,12 +95,23 @@
 							<td>
 							
 							
-						</div>							
+						</div>		
+					<%-- 	<tr>
+				<div class ="form-group">
+				 <td><label for="Category">Category</label></td>
+				<td><select>
+			     <c:forEach items="${categoryList}" var="category">
+				<option  path="category.cid" value="${category.cId}"/>${category.categoryName}
+				 </c:forEach>
+				</select>
+				</td>
+							
+				</div> --%>					
 					</tr>
 					<tr>
 						<div class="form-group">
 							<td><label for="image">Upload Image</label></td>
-							<td><input type="file" name="image" ></td>
+							<td><input type="file" name="fileUpload" ></td>
 						</div>
 					</tr>
 					<tr>
@@ -103,7 +121,13 @@
 				</form:form>
 			</div>
 		</div>
+		</center>
 	</body>
-
+	  <table align="right">
+<td><a id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" title="Click to return on the top page" data-toggle="tooltip" data-placement="left"><span class="glyphicon glyphicon-chevron-up"></span></a></td>
+</tr>
+</table>
+<div>
 	<%@ include file="footer.jsp" %>
+	</div>
 </html>

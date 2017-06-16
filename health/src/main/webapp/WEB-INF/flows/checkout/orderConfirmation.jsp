@@ -7,11 +7,22 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%@ include file="/WEB-INF/pages/header.jsp" %>
 <html>
+<center>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 <c:url var="style1" value="/resources/css/orderConfirmation.css"></c:url>
   <link rel="stylesheet" href="${style1}"/> 
+   <style>
+ body {
+        background-color: #444;
+        background: url(http://www.planwallpaper.com/static/images/Alien_Ink_2560X1600_Abstract_Background_dh8LV2F.jpg);
+        
+    }
+.vertical-offset-100{
+    padding-top:100px;
+}
+</style>
 </head>
 <body>
    <div class="container-wrapper">
@@ -113,27 +124,22 @@ ${order.cart.customer.billingAddress.country}, ${order.cart.customer.billingAddr
 </form:form>
 </div>
 </div>
+</center>
 </body>
+<%@ include file="/WEB-INF/pages/footer.jsp" %>
 </html>
 
 <%-- <jsp:useBean id="now" class="java.util.Date" />
-
 <div class="container-wrapper">
 <div class="container">
 <div class="page-header">
 <h1>Order</h1>
-
 <p class="lead">Order confirmation</p>
 </div>
-
 <div class="container">
-
 <div class="row">
-
 <form:form commandName="order" class="form-horizontal">
-
 <div class="well col-xs-10 col-sm-10 col-md-6 col-xs-offset-1 col-sm-offset-1 col-md-offset-3">
-
 <div class="txt-center">
 <h1>Receipt</h1>
 </div>
@@ -152,7 +158,6 @@ ${order.cart.customer.shippingAddress.country}, ${order.cart.customer.shippingAd
 <p>Shipping Date: <fmt:formatDate type="date" value="${now}" /></p>
 </div>
 </div>
-
 <div class="row">
 <div class="col-xs-6 col-sm-6 col-md-6">
 <address>
@@ -165,7 +170,6 @@ ${order.cart.customer.billingAddress.country}, ${order.cart.customer.billingAddr
 </address>
 </div>
 </div>
-
 <div class="row">
 <table class="table table-hover">
 <thead>
@@ -187,7 +191,6 @@ ${order.cart.customer.billingAddress.country}, ${order.cart.customer.billingAddr
 <c:set var="grandTotal" value="${grandTotal + cartItem.totalPrice }"></c:set>
 </tr>
 </c:forEach>
-
 <tr>
 <td></td>
 <td></td>
@@ -198,20 +201,13 @@ ${order.cart.customer.billingAddress.country}, ${order.cart.customer.billingAddr
 <h4><strong>$ ${grandTotal}</strong></h4>
 </td>
 </tr>
-
 </tbody>
 </table>
 </div>
-
-
 <input type="hidden" name="_flowExecutionKey" />
-
 <br/><br/>
-
 <button class="btn btn-default" name="_eventId_backToCollectShippingDetail">Back</button>
-
 <input type="submit" value="Submit Order" class="btn btn-default" name="_eventId_orderConfirmed" />
-
 <button class="btn btn-default" name="_eventId_cancel">Cancel</button>
 </div>
 </form:form>

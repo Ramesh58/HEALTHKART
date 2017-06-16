@@ -4,13 +4,23 @@
 <%@ include file="/WEB-INF/pages/header.jsp" %>
 <html>
 <head>
+<style>
+ body {
+        background-color: #444;
+        background: url(http://www.planwallpaper.com/static/images/Alien_Ink_2560X1600_Abstract_Background_dh8LV2F.jpg);
+        
+    }
+.vertical-offset-100{
+    padding-top:100px;
+}
+</style>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
-<style>
+<!-- <style>
    body{
        margin-top:20%;
     }
-    h1{
+  /*   h1{
       text-transform:uppercase;
        font-weight:bold;
        font-size:35px;
@@ -26,12 +36,29 @@
       font-size:28px;
         text-decoration:none;
         color:red;
-    }
-</style>
+    } */
+</style> -->
 </head>
+<center>
 <body>
-    <h1>Thank you for your business!!!</h1>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+    <h1><b>Thank you for your business!!!</b></h1>
     <h1>Your order will be shipped within two days</h1>
-    <a href="<c:url value="/all/product/getallproducts"></c:url>">SHOP NOW</a>
+     <a href="<c:url value="/all/product/productlist"></c:url>"><b>SHOP AGAIN</b></a>
 </body>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+</center>
+<%@ include file="/WEB-INF/pages/footer.jsp" %>
 </html>

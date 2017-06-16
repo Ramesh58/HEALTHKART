@@ -8,38 +8,79 @@
 <title>Insert title here</title>
 <c:url var="style1" value="/resources/css/collectCustomerInfo.css"></c:url>
   <link rel="stylesheet" href="${style1}"/> 
+  <style>
+ body {
+        background-color: #444;
+        background: url(http://www.planwallpaper.com/static/images/Alien_Ink_2560X1600_Abstract_Background_dh8LV2F.jpg);
+        
+    }
+.vertical-offset-100{
+    padding-top:100px;
+}
+</style>
 </head>
+<center>
 <body>
  <div class="topForm">
       <div id="top">
      <button id="value" disabled="true">2</button>
      <h4 id="text">Collecting Shipping Details</h4>
       </div>
+      
+      
 <form:form modelAttribute="order">
-   <div class="form1">
-   <label for="apartmentNumber">Apartment Number</label>
+
+ <div class="container" align="justify">
+			    <div class="row vertical-offset-100">
+			    	<div class="col-md-6 col-md-offset-3">
+			    		<div class="panel panel-default">
+							<div class="panel-heading">
+						    	<h3 class="panel-title" align="center"><i><b>Shipping Address</b></i></h3>
+						 	</div>
+						 	<fieldset>
+	<tr>					 	
+   <div class="form1" align="center">
+   <td><label for="apartmentNumber">Apartment Number</label></td>
    <form:input path="cart.customer.shippingAddress.apartmentNumber" cssStyle="border:2px solid rgba(0,0,0,0.2)"/>
    </div>
-   <div class="form">
-   <label for="streetName">Street Name</label>
+   </tr>
+   <tr>
+   <div class="form" align="center">
+   <td><label for="streetName">Street Name</label></td>
    <form:input path="cart.customer.shippingAddress.streetName" cssStyle="border:2px solid rgba(0,0,0,0.2)"/>
    </div>
-   <div class="form">
-   <label for="city">City</label>
+   </tr>
+   <tr>
+   <div class="form" align="center">
+   <td><label for="city">City</label></td>
    <form:input path="cart.customer.shippingAddress.city" cssStyle="border:2px solid rgba(0,0,0,0.2)"/>
-   </div>
- <%--   <div class="form">
+   </div></tr>
+ <%--   <div class="form" align="center">
    <label for="State">State</label>
    <form:input path="cart.customer.shippingAddress.state" cssStyle="border:2px solid rgba(0,0,0,0.2)"/>
    </div> --%>
-   <div class="form">
-   <label for="Country">Country</label>
+   <tr>
+   <div class="form" align="center">
+   <td><label for="Country">Country</label></td>
    <form:input path="cart.customer.shippingAddress.country" cssStyle="border:2px solid rgba(0,0,0,0.2)"/>
    </div>
+   </tr>
+    <div class="form" align="center">
    <button name="_eventId_backToCollectCustomerInfo">Back</button>
    <button name="_eventId_shippingDetailCollected">Next</button>
-   <button name="_eventId_cancel">cancel</button>
+   <button name="_eventId_cancel">cancel</button></div>
   </form:form>
   </div>
+
+</fieldset>
+</div>
+</div>
+</div>
+</div>
 </body>
+<br>
+<br>
+<br>
+</center>
+<%@ include file="/WEB-INF/pages/footer.jsp" %>
 </html>

@@ -18,6 +18,13 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 		<title>Insert title here</title>
 	</head>
+	<style>
+ body {
+        background-color: #444;
+        background: url("http://www.planwallpaper.com/static/images/Alien_Ink_2560X1600_Abstract_Background_dh8LV2F.jpg");
+        
+    }
+</style>
 	<body>
 		<%@ include file="header-admin.jsp" %>
 		<div class="container wrapper">
